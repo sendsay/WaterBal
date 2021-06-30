@@ -24,7 +24,7 @@ type
   private
     { Private declarations }
   public
-    iToDayVolume : Integer;
+    iToDayVolume : Double;
   end;
 
 var
@@ -42,20 +42,22 @@ uses
 procedure Tfrm_Main.btn_PlusClick(Sender: TObject);
 var
   EnterVolumeDlg : TMyInputQuery;
-  i, j : Integer;
+  i, j : Double;
 begin
   EnterVolumeDlg := TMyInputQuery.Create(['Enter volume in mL.'], [''], self,
     procedure
     begin
-      iToDayVolume := StrToInt(iToDayVolume + EnterVolumeDlg.Values[0]);
-      i := (iToDayVolume mod 10);
-      j := (iToDayVolume mod 100);
+      iToDayVolume := (iToDayVolume + (EnterVolumeDlg.Values[0].ToInteger()) / 1000);
+//      i := (iToDayVolume / 1000);
+//      j := (iToDayVolume mod 1000);
+//
+//      ShowMessage(i.ToString + ' -- '+ j.ToString);
 
 
 
 
 
-      lbl_Balance.Text := IntToStr(iToDayVolume);
+      lbl_Balance.Text := FloatToStr(iToDayVolume) + ' mL.';
     end
   );
   EnterVolumeDlg.ShowMe;
