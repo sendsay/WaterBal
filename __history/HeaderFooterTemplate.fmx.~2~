@@ -1,0 +1,84 @@
+object frm_Main: Tfrm_Main
+  Left = 0
+  Top = 0
+  Caption = 'Water Balance'
+  ClientHeight = 486
+  ClientWidth = 284
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object tlb_Footer: TToolBar
+    Align = Bottom
+    Position.Y = 438.000000000000000000
+    Size.Width = 284.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 0
+    object btn_Plus: TSpeedButton
+      Align = Left
+      Size.Width = 73.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Plus'
+    end
+  end
+  object pnl_BackGround: TPanel
+    Align = Client
+    Size.Width = 284.000000000000000000
+    Size.Height = 438.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object tlb_Header: TToolBar
+      Size.Width = 284.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lbl_HeaderLabel: TLabel
+        Align = Contents
+        Size.Width = 284.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toollabel'
+        TextSettings.HorzAlign = Center
+        Text = 'WATER BALANCE'
+      end
+      object btn_Params: TSpeedButton
+        Align = Right
+        Position.X = 211.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Params'
+      end
+    end
+    object lbl_Balance: TLabel
+      Align = Top
+      StyledSettings = [Family, Style]
+      Margins.Top = 50.000000000000000000
+      Position.Y = 171.000000000000000000
+      Size.Width = 284.000000000000000000
+      Size.Height = 62.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.FontColor = claCornflowerblue
+      TextSettings.HorzAlign = Center
+      Text = '0 lit.'
+      TabOrder = 1
+    end
+    object lbl_HeaderToday: TLabel
+      Align = Top
+      StyledSettings = [Family, Size, Style]
+      Margins.Top = 50.000000000000000000
+      Position.Y = 98.000000000000000000
+      Size.Width = 284.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claCornflowerblue
+      TextSettings.HorzAlign = Center
+      Text = 'Today your balance is :'
+      TabOrder = 2
+    end
+  end
+end

@@ -1,0 +1,53 @@
+unit HeaderFooterTemplate;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Effects, FMX.Platform, FMX.DialogService;
+
+type
+  Tfrm_Main = class(TForm)
+    tlb_Header: TToolBar;
+    tlb_Footer: TToolBar;
+    lbl_HeaderLabel: TLabel;
+    btn_Plus: TSpeedButton;
+    btn_Params: TSpeedButton;
+    lbl_HeaderToday: TLabel;
+    lbl_Balance: TLabel;
+    pnl_BackGround: TPanel;
+    shdwfct_1: TShadowEffect;
+    procedure btn_PlusClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_Main: Tfrm_Main;
+
+implementation
+
+{$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
+
+procedure Tfrm_Main.btn_PlusClick(Sender: TObject);
+var
+  Password : String;
+begin
+  TDialogservice.InputQuery('Enter volume in m/l.', ['Volume'], [''],
+    procedure(const AResult: TModalResult; const AValues: array of string)
+      begin
+        case AResult of
+          mrOk:
+             Password:=AValues[0];
+          mrCancel:
+             Password:='Ввод пароля отменен';
+        end;
+      end
+    );
+end;
+
+end.

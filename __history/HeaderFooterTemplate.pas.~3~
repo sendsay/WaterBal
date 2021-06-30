@@ -1,0 +1,36 @@
+unit HeaderFooterTemplate;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Effects;
+
+type
+  Tfrm_Main = class(TForm)
+    tlb_Header: TToolBar;
+    tlb_Footer: TToolBar;
+    lbl_HeaderLabel: TLabel;
+    btn_Plus: TSpeedButton;
+    btn_Params: TSpeedButton;
+    lbl_HeaderToday: TLabel;
+    lbl_Balance: TLabel;
+    pnl_BackGround: TPanel;
+    shdwfct_1: TShadowEffect;
+    shdwfct_2: TShadowEffect;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_Main: Tfrm_Main;
+
+implementation
+
+{$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
+
+end.

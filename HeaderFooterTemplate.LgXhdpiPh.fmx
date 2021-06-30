@@ -1,0 +1,34 @@
+inherited frm_Main_LgXhdpiPh: Tfrm_Main_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited ScrollBox1: TScrollBox
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    Viewport.Width = 450.000000000000000000
+    Viewport.Height = 695.000000000000000000
+    inherited pnl_BackGround: TPanel
+      Size.Width = 450.000000000000000000
+      Size.Height = 647.000000000000000000
+      inherited tlb_Header: TToolBar
+        Size.Width = 450.000000000000000000
+        inherited lbl_HeaderLabel: TLabel
+          Size.Width = 450.000000000000000000
+        end
+        inherited btn_Params: TSpeedButton
+          Position.X = 377.000000000000000000
+        end
+      end
+      inherited lbl_Balance: TLabel
+        Size.Width = 450.000000000000000000
+      end
+      inherited lbl_HeaderToday: TLabel
+        Size.Width = 450.000000000000000000
+      end
+    end
+    inherited tlb_Footer: TToolBar
+      Position.Y = 647.000000000000000000
+      Size.Width = 450.000000000000000000
+    end
+  end
+end
